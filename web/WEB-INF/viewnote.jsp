@@ -14,12 +14,12 @@
     <body>
         <h1>Simple Note Keeper</h1>
         <h2>View Note</h2>
-        <form>
-            Title: <input name="title" type="text" placeholder="Title goes here."> <br><br>
+        
+            Title: ${note.title} <br><br>
             
-            Contents: <br>
-            <input name="content" type="text" placeholder="Contents go here.">
-        </form><br><br>
+            Contents: ${note.content} <br>
+            
+        <br><br>
         <a href="note?edit">Edit</a>
     </body>
 </html>
