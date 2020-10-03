@@ -34,6 +34,7 @@ public class NoteServlet extends HttpServlet {
         request.setAttribute("note", note);
 
         if (edit == null || !edit.equals("")) {
+
             getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request, response);
             return;
         }
@@ -44,7 +45,7 @@ public class NoteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String title = request.getParameter("title");
         String content = request.getParameter("content");
         String path = getServletContext().getRealPath("/WEB-INF/note.txt");
@@ -54,7 +55,7 @@ public class NoteServlet extends HttpServlet {
         pw.println(content);
 
         pw.close();
-        
+
         Note note = new Note(title, content);
         request.setAttribute("note", note);
 
