@@ -15,10 +15,11 @@
         <h1>Simple Note Keeper</h1>
         <h2>edit Note</h2>
         <form>
-            Title: <input name="title" type="text" placeholder="Title goes here."> <br><br>
+            Title: <input name="title" type="text" placeholder="Title goes here." value="${note.title}"> <br><br>
 
             Contents: <br>
-            <input name="content" type="text" placeholder="Contents go here.">
+            <input name="content" type="text" placeholder="Contents go here." value="${note.content}">
+            
             <input type="button" value="save" name="save">
         </form><br><br>
     </body>
