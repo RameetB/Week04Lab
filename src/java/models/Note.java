@@ -16,8 +16,6 @@ public class Note implements Serializable {
     private String content;
 
     public Note() {
-        title = "";
-        content = "";
     }
 
     public Note(String title, String content) {

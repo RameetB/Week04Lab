@@ -10,6 +10,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Edit Note - Simple Note Keeper</title>
+        <script> function save() {
+            
+        }
+        </script>
     </head>
     <body>
         <h1>Simple Note Keeper</h1>
@@ -20,7 +24,7 @@
             Contents: <br>
             <input name="content" type="text" placeholder="Contents go here." value="${note.content}">
             <br>
-            <input type="button" value="save" name="save">
+            <input type="submit" value="save">
         </form><br><br>
     </body>
 </html>
