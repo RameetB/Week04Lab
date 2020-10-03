@@ -24,9 +24,8 @@ public class NoteServlet extends HttpServlet {
 
         BufferedReader br = new BufferedReader(new FileReader(new File(path)));
         title = br.readLine();
-        while((file = br.readLine()) != null)
-        {
-        content = file;
+        while ((file = br.readLine()) != null) {
+            content = file;
         }
         Note note = new Note(title, content);
         request.setAttribute("note", note);
@@ -47,16 +46,16 @@ public class NoteServlet extends HttpServlet {
 
         String title = request.getParameter("title");
         String content = request.getParameter("content");
-        
+
         Note note = new Note(title, content);
         request.setAttribute("note", note);
 
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
 
         pw.println(title);
-        
+
         pw.println(content);
-        
+
         pw.flush();
         pw.close();
 

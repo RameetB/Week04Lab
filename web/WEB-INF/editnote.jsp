@@ -20,7 +20,7 @@
             <input name="title" type="text" placeholder="Title goes here." value="${note.title}"> <br><br>
 
             <label for="content">Content:</label>
-            <input type="text" name="content" rows="1" cols="50" value="${note.content}">
+            <textarea name="content" rows="1" cols="50">${note.content}</textarea>
             <br>
             <input type="submit" value="save">
         </form><br><br>
