@@ -16,11 +16,11 @@
         <h1>Simple Note Keeper</h1>
         <h2>edit Note</h2>
         <form action="note" method="post">
-            Title: <input name="title" type="text" placeholder="Title goes here." value="${note.title}"> <br><br>
+            <label for="title">Title: </label>
+            <input name="title" type="text" placeholder="Title goes here." value="${note.title}"> <br><br>
 
-            Contents: <br>
-            <input name="content" type="text" placeholder="Contents go here." value="${note.content}">
-
+            <label for="content">Content:</label>
+            <input type="text" name="content" rows="1" cols="50" value="${note.content}">
             <br>
             <input type="submit" value="save">
         </form><br><br>
