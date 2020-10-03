@@ -14,7 +14,7 @@
     <body>
         <h1>Simple Note Keeper</h1>
         <h2>edit Note</h2>
-        <form>
+        <form action="note" method="post">
             Title: <input name="title" type="text" placeholder="Title goes here." value="${note.title}"> <br><br>
 
             Contents: <br>
