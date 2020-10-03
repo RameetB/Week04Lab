@@ -27,7 +27,7 @@ public class NoteServlet extends HttpServlet {
         title = br.readLine();
 
         while ((file = br.readLine()) != null) {
-            content += "\n" + file;
+            content += "<br>" + file;
         }
 
         Note note = new Note(title, content);
@@ -50,14 +50,17 @@ public class NoteServlet extends HttpServlet {
         String content = request.getParameter("content");
         String path = getServletContext().getRealPath("/WEB-INF/note.txt");
 
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
+        Note note = new Note(title, content);
+        request.setAttribute("note", note);
+        
+        PrintWriter pw;
+        pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
         pw.println(title);
         pw.println(content);
 
         pw.close();
 
-        Note note = new Note(title, content);
-        request.setAttribute("note", note);
+        
 
         getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request, response);
 
