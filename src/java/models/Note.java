@@ -5,10 +5,12 @@
  */
 package models;
 
+import java.io.*;
+
 /**
  *
  * @author 814992
  */
-public class Note {
+public class Note implements Serializable {
     
 }
